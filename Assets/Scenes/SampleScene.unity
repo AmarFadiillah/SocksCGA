@@ -663,11 +663,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: a872dd4bf4b681f45bd06de84b9720fd, type: 3}
 --- !u!4 &1510459934 stripped
@@ -747,6 +747,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: 11539_leg_01_V1
       objectReference: {fileID: 0}
+    - target: {fileID: 2699092741681021261, guid: a872dd4bf4b681f45bd06de84b9720fd, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2699092741681021261, guid: a872dd4bf4b681f45bd06de84b9720fd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2699092741681021261, guid: a872dd4bf4b681f45bd06de84b9720fd, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2699092741681021261, guid: a872dd4bf4b681f45bd06de84b9720fd, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -766,8 +782,8 @@ GameObject:
   - component: {fileID: 1567631994}
   - component: {fileID: 1567631993}
   - component: {fileID: 1567631992}
-  - component: {fileID: 1567631991}
   - component: {fileID: 1567631990}
+  - component: {fileID: 1567631991}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -799,9 +815,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 2
-  m_CollisionDetection: 0
+  m_Interpolate: 1
+  m_Constraints: 98
+  m_CollisionDetection: 1
 --- !u!65 &1567631991
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1099,6 +1115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1841999101}
+  - component: {fileID: 1841999102}
   m_Layer: 0
   m_Name: Leg
   m_TagString: Untagged
@@ -1122,6 +1139,21 @@ Transform:
   - {fileID: 1510459934}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 3.07, y: 0, z: 0}
+--- !u!114 &1841999102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841999100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8576ba826b3328645bc617cdc80d2cd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kickSpeed: 100
+  kickAngle: 45
+  kickForce: 1000
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
